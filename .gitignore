@@ -1,0 +1,7 @@
+.vagrant
+.vscode
+lib/
+swagger/
+api/*cache*
+api/env/
+docker/mysql-server/
