@@ -1,8 +1,11 @@
 version: '3.1'
 services:
-  # api:
-  #   volumes:
-  #     - .:/app
+  api:
+    volumes:
+      - ../api:/src
+  web:
+    volumes:
+      - ../web/build:/usr/share/nginx/html
   mysql:
     volumes:
       - ./mysql-server/data:/var/lib/mysql:rw
