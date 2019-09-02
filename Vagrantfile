@@ -20,9 +20,16 @@ Vagrant.configure(2) do |config|
   # accessing "localhost:8080" will access port 80 on the guest machine.
   # api
   config.vm.network :forwarded_port, guest: 80, host: 8080
-  # web
-  config.vm.network :forwarded_port, guest: 3000, host: 3000,
-  host_ip: "172.17.0.2"
+  # web services
+  config.vm.network :forwarded_port, guest: 3000, host: 3000
+  # api port
+  config.vm.network :forwarded_port, guest: 5000, host: 5000
+  # api2 port
+  config.vm.network :forwarded_port, guest: 6000, host: 6000
+  # Prisma Admin
+  config.vm.network :forwarded_port, guest: 8000, host: 8000
+  # Prisma port
+  config.vm.network :forwarded_port, guest: 4466, host: 4000
 
   # opens up the postgres ports
   config.vm.network :forwarded_port, guest: 443, host: 443
