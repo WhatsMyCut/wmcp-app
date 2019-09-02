@@ -1,1 +1,1 @@
-# wmcp-flask-api
+# wmcp-app
