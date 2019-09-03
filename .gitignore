@@ -4,6 +4,7 @@ lib/
 swagger/
 api/*cache*
 api/env/
+env/
 mysql-server/[data|log|tmp]/
 *.code-workspace
 
