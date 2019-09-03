@@ -56,6 +56,8 @@ services:
       - ..:/src
       - $SSH_AUTH_SOCK:/ssh-agent
   api2:
+    depends_on:
+      - postgres
     container_name: wmcp-api2
     build:
       context: ../api2/
