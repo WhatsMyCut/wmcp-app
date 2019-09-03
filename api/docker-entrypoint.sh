@@ -1,5 +1,5 @@
 #!/bin/bash
-
+python3 -m venv env
 . env/bin/activate
 pip install --upgrade Flask Flask-MySQLdb flask-swagger mysql-connector
 pip install --upgrade -r /src/api/requirements.txt -t lib

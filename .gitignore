@@ -4,4 +4,6 @@ lib/
 swagger/
 api/*cache*
 api/env/
-docker/mysql-server/
+mysql-server/[data|log|tmp]/
+*.code-workspace
+

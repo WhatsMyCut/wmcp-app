@@ -2,7 +2,7 @@ import uuid
 import wmcp_app
 import json
 import pprint
-from sentry_sdk.integrations.flask import FlaskIntegration
+# from sentry_sdk.integrations.flask import FlaskIntegration
 
 
 import os
@@ -11,10 +11,10 @@ from flask_swagger import swagger
 
 strict_slashes=False
 
-sentry_sdk.init(
-    dsn="https://70dbc44fe23b422198de7a935f426f79@sentry.io/1397097",
-    integrations=[FlaskIntegration()]
-)
+# sentry_sdk.init(
+#     dsn="https://70dbc44fe23b422198de7a935f426f79@sentry.io/1397097",
+#     integrations=[FlaskIntegration()]
+# )
 
 app = Flask(__name__)
 app.config['DEBUG'] = True

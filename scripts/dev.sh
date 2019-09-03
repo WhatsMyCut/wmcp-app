@@ -17,6 +17,6 @@ docker rm $1 >> /dev/null
 fi
 
 # run service with passed name and override command
-docker-compose -f docker/docker-compose.yml -f docker/docker-compose.dev.yml run --service-ports --name $1 $1 /bin/bash
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml run --service-ports --name $1 $1 /bin/bash
 fi
 
