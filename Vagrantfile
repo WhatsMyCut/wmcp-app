@@ -30,6 +30,8 @@ Vagrant.configure(2) do |config|
   config.vm.network :forwarded_port, guest: 8000, host: 8000
   # Prisma port
   config.vm.network :forwarded_port, guest: 4466, host: 4000
+  # Postgres port
+  config.vm.network :forwarded_port, guest: 5432, host: 5432
 
   # opens up the postgres ports
   config.vm.network :forwarded_port, guest: 443, host: 443
