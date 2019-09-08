@@ -107,20 +107,23 @@ services:
     depends_on:
       - postgres
     environment:
+      PRISMA_MANAGEMENT_API_SECRET: 123
       PRISMA_CONFIG: |
         port: 4466
         # uncomment the next line and provide the env var PRISMA_MANAGEMENT_API_SECRET=my-secret to activate cluster security
-        # managementApiSecret: my-secret
+        managementApiSecret: 123
         databases:
           default:
             connector: postgres
             host: postgres
-            user: dbuser
-            migrations: true
-            password: 123
-            rawAccess: true
             port: 5432
-            migrations: true
+            database: whatsmycut
+            schema: whatsmycut$public
+            user: dbuser
+            password: 123
+            migrations: false
+            rawAccess: true
+            ssl: false
 networks:
   default:
     external:
